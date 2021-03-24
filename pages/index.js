@@ -2,63 +2,35 @@ import Head from 'next/head'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
+  const urlParams = new URLSearchParams(window.location.search);
+  const getHostnameFromRegex = (url) => {
+    // run against regex
+    const matches = url.match(/\/\/([^/?#]+)(?:[/?#]|$)/i)
+    // extract hostname (will be null if no match is found)
+    return matches && matches[1]
+  }
+
+  const theBlockedUrl = urlParams.get('url') ? decodeURIComponent(urlParams.get('url')) : null
+  const theBlockedHostname = theBlockedUrl ? getHostnameFromRegex(theBlockedUrl) : '未提供'
   return (
     <div className={styles.container}>
       <Head>
-        <title>Create Next App</title>
+        <title>Matataki iframe safety tips</title>
         <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-          Welcome to <a href="https://nextjs.org">Next.js!</a>
+            对不起，打扰了 
         </h1>
-
-        <p className={styles.description}>
-          Get started by editing{' '}
-          <code className={styles.code}>pages/index.js</code>
-        </p>
-
-        <div className={styles.grid}>
-          <a href="https://nextjs.org/docs" className={styles.card}>
-            <h3>Documentation &rarr;</h3>
-            <p>Find in-depth information about Next.js features and API.</p>
-          </a>
-
-          <a href="https://nextjs.org/learn" className={styles.card}>
-            <h3>Learn &rarr;</h3>
-            <p>Learn about Next.js in an interactive course with quizzes!</p>
-          </a>
-
-          <a
-            href="https://github.com/vercel/next.js/tree/master/examples"
-            className={styles.card}
-          >
-            <h3>Examples &rarr;</h3>
-            <p>Discover and deploy boilerplate example Next.js projects.</p>
-          </a>
-
-          <a
-            href="https://vercel.com/import?filter=next.js&utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-            className={styles.card}
-          >
-            <h3>Deploy &rarr;</h3>
-            <p>
-              Instantly deploy your Next.js site to a public URL with Vercel.
-            </p>
-          </a>
-        </div>
+        <h2 className={styles.description}>Sorry for the interruption</h2>
+        <p>我们暂时不支持 <code>{theBlockedHostname}</code> 的内容嵌入</p>
+        <p>如果有内嵌需求，请与联系 Matataki 团队。</p>
+        <a className={styles.link} href={theBlockedUrl} target="_blank" rel="noopener noreferrer nofollow">坚持访问（在新窗口打开）</a>
       </main>
 
       <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{' '}
-          <img src="/vercel.svg" alt="Vercel Logo" className={styles.logo} />
-        </a>
+        Matataki 安全团队
       </footer>
     </div>
   )
