@@ -36,9 +36,16 @@ export default function Home() {
             🙇‍♀️🙇对不起，打扰了 
             <span className={styles.description}>Sorry for the interruption</span>
         </h1>
-        <p>我们暂时不支持⚠️ <code className={styles.hostname}>{theBlockedHostname}</code> ⚠️的内容嵌入</p>
-        <p>如果你的服务有嵌入 Matataki 文章的需求，请联系 Matataki 团队。</p>
-        <a className={styles.link} href={theBlockedUrl} target="_blank" rel="noopener noreferrer nofollow">🙋 我知道未知链接有风险，且坚持访问（在新窗口打开，我们不对其内容负责）</a>
+        <p>根据我们最新的
+            <a href="https://matataki.io/p/7770" className={styles.link} target="_blank">安全规定</a>，
+            我们暂时不支持⚠️ <code className={styles.hostname}>{theBlockedHostname}</code> ⚠️的内容嵌入</p>
+        <p>如果你的服务有嵌入 Matataki 文章的需求，
+            请在 <a 
+            href="https://github.com/Matataki-io/Matataki-FE/blob/testing/config/iframe-whitelist.json"
+            className={styles.link} target="_blank">GitHub 提起 PR</a>，我们会尽快审核。
+        </p>
+        <p>⚠️ 点击下方的「坚持访问」，代表你知晓未知链接的风险并自己承担其带来的一切后果。</p>
+        <a className={styles.link} href={theBlockedUrl} target="_blank" rel="noopener noreferrer nofollow">🙋 坚持访问</a>
       </main>
 
       <footer className={styles.footer}>
