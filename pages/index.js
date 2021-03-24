@@ -33,12 +33,12 @@ export default function Home() {
 
       <main className={styles.main}>
         <h1 className={styles.title}>
-            对不起，打扰了 
+            🙇‍♀️🙇对不起，打扰了 
             <span className={styles.description}>Sorry for the interruption</span>
         </h1>
-        <p>我们暂时不支持 <code>{theBlockedHostname}</code> 的内容嵌入</p>
+        <p>我们暂时不支持⚠️ <code className={styles.hostname}>{theBlockedHostname}</code> ⚠️的内容嵌入</p>
         <p>如果你的服务有嵌入 Matataki 文章的需求，请联系 Matataki 团队。</p>
-        <a className={styles.link} href={theBlockedUrl} target="_blank" rel="noopener noreferrer nofollow">我知道未知链接有风险，且坚持访问（在新窗口打开，我们不对其内容负责）</a>
+        <a className={styles.link} href={theBlockedUrl} target="_blank" rel="noopener noreferrer nofollow">🙋 我知道未知链接有风险，且坚持访问（在新窗口打开，我们不对其内容负责）</a>
       </main>
 
       <footer className={styles.footer}>

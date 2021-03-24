@@ -67,6 +67,15 @@ a.link {
   color: rgb(138, 138, 138);
 }
 
+.hostname {
+    background: #f17a8f;
+    border-radius: 3px;
+    padding: 3px;
+    color: #111111;
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
 .code {
   background: #fafafa;
   border-radius: 5px;
