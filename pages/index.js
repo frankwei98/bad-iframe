@@ -44,7 +44,7 @@ export default function Home() {
             href="https://github.com/Matataki-io/Matataki-FE/blob/testing/config/iframe-whitelist.json"
             className={styles.link} target="_blank">GitHub 提起 PR</a>，我们会尽快审核。
         </p>
-        <p>⚠️ 点击下方的「坚持访问」，代表你知晓未知链接的风险并自己承担其带来的一切后果。</p>
+        <p>⚠️ 点击下方的「坚持访问」，<b style={{color: "#c30101"}}>代表你知晓未知链接的风险并自己承担其带来的一切后果。</b></p>
         <a className={styles.link} href={theBlockedUrl} target="_blank" rel="noopener noreferrer nofollow">🙋 坚持访问</a>
       </main>
 
