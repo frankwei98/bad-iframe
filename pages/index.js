@@ -36,10 +36,10 @@ export default function Home() {
             🙇‍♀️🙇对不起，打扰了 
             <span className={styles.description}>Sorry for the interruption</span>
         </h1>
-        <p>根据我们最新的
+        <p>根据 Matataki 最新的
             <a href="https://matataki.io/p/7770" className={styles.link} target="_blank">安全规定</a>，
             我们暂时不支持⚠️ <code className={styles.hostname}>{theBlockedHostname}</code> ⚠️的内容嵌入</p>
-        <p>如果你的服务有嵌入 Matataki 文章的需求，
+        <p>如果你的服务有在 Matataki 文章嵌入外部小组件的需求，
             请在 <a 
             href="https://github.com/Matataki-io/Matataki-FE/blob/testing/config/iframe-whitelist.json"
             className={styles.link} target="_blank">GitHub 提起 PR</a>，我们会尽快审核。
